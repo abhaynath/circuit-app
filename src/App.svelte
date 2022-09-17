@@ -1,7 +1,7 @@
 <script lang="ts">
-  import svelteLogo from "./assets/svelte.svg";
-  import Draggable from "./components/custom/Draggable.svelte";
-  import AndGateComponent from "./components/logic-gates/AndGateComponent.svelte";
+  import svelteLogo from "@assets/svelte.svg";
+  import Draggable from "@components/custom/Draggable.svelte";
+  import AndGateComponent from "@logic-gates/AndGateComponent.svelte";
   import Counter from "./lib/Counter.svelte";
 </script>
 
@@ -9,7 +9,7 @@
   <div class="circuitBoard">
     <AndGateComponent />
     <AndGateComponent />
-  <!--   <Draggable>
+    <!--   <Draggable>
     </Draggable>
 
     <Draggable>

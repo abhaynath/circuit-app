@@ -1,4 +1,4 @@
-import { Common } from "../helpers/common";
+import { Common } from "@helpers/common";
 
 class PinModel {
   private id: string = "";

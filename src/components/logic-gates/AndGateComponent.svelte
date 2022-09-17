@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AndModel } from "../../models/AndModel";
+  import { AndModel } from "@models/AndModel";
   import Draggable from "../custom/Draggable.svelte";
   import InputPin from "./InputPin.svelte";
   import OutputPin from "./OutputPin.svelte";
