@@ -9,6 +9,7 @@
   export let isOn = false;
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <circle
   class={isOn ? "gateInput gateInputActive" : "gateInput gateInactiveInput"}
   cx={x}
