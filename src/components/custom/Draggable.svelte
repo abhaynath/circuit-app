@@ -1,6 +1,11 @@
 <script lang="ts">
-  export let left = 100;
-  export let top = 100;
+  interface Props {
+    left?: number;
+    top?: number;
+    children?: import("svelte").Snippet;
+  }
+
+  let { left = $bindable(100), top = $bindable(100), children }: Props = $props();
 
   let moving = false;
 
@@ -18,11 +23,11 @@
   }
 </script>
 
-<section on:mousedown={onMouseDown} style="left:{left}px; top:{top}px;" class="draggable">
-  <slot />
+<section  onmousedown={onMouseDown} style="left:{left}px; top:{top}px;" class="draggable">
+  {@render children?.()}
 </section>
 
-<svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} />
+<svelte:window onmouseup={onMouseUp} onmousemove={onMouseMove} />
 
 <style>
   .draggable {

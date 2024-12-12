@@ -1,7 +1,7 @@
 <script lang="ts">
   import Fa from "svelte-fa";
   import { faUser, faKey, faChartPie, faFileCode, faTools } from "@fortawesome/free-solid-svg-icons";
-  let count: number = 0;
+  let count: number = $state(0);
 
   /**
    * increment is good function to increment value
@@ -14,6 +14,6 @@
 <div>
   <Fa icon={faChartPie} />
 </div>
-<button on:click={increment}>
+<button onclick={increment}>
   count is {count}
 </button>

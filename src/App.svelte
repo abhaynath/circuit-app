@@ -25,9 +25,7 @@
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum error recusandae magni repudiandae, adipisci veritatis voluptatibus iste! Quisquam fugiat,
       perspiciatis earum architecto, qui cupiditate expedita nemo impedit obcaecati rem quaerat.
     </p>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
+
     <a href="https://svelte.dev" target="_blank">
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>

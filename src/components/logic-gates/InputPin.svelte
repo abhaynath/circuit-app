@@ -2,20 +2,29 @@
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
-  export let x = 0;
-  export let y = 0;
-  export let r = 5;
 
-  export let isOn = false;
+  interface Props {
+    x?: number;
+    y?: number;
+    r?: number;
+    isOn?: boolean;
+  }
+
+  let {
+    x = 0,
+    y = 0,
+    r = 5,
+    isOn = $bindable(false)
+  }: Props = $props();
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
 <circle
   class={isOn ? "gateInput gateInputActive" : "gateInput gateInactiveInput"}
   cx={x}
   cy={y}
   {r}
-  on:click={() => {
+  onclick={() => {
     isOn = !isOn;
     dispatch("inputChanged", isOn);
   }}

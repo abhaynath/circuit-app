@@ -1,12 +1,22 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
 
-  //  const dispatch = createEventDispatcher();
-  export let x = 0;
-  export let y = 0;
-  export let r = 5;
+  
 
-  export let isOn = false;
+  interface Props {
+    //  const dispatch = createEventDispatcher();
+    x?: number;
+    y?: number;
+    r?: number;
+    isOn?: boolean;
+  }
+
+  let {
+    x = 0,
+    y = 0,
+    r = 5,
+    isOn = false
+  }: Props = $props();
 </script>
 
 <circle class={isOn ? "gateOutput active" : "gateOutput inactive"} cx={x} cy={y} {r} />
